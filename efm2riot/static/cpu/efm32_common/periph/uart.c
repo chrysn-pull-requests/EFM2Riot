@@ -24,6 +24,11 @@
 #include "sched.h"
 #include "thread.h"
 
+#ifdef MIXED_PERIPHERALS
+#define MASK_UART_PREFIX efm32
+#include <periph/mask_uart.h>
+#endif
+
 #include "periph/uart.h"
 #include "periph/gpio.h"
 
