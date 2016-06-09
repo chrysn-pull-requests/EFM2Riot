@@ -306,6 +306,17 @@ typedef struct {
 /** @} */
 
 /**
+ * @brief   A custom uart_t just to show how mixed peripherals work
+ * @{
+ */
+typedef unsigned int efm32_uart_t;
+#ifndef MIXED_PERIPHERALS
+#define HAVE_UART_T
+typedef efm32_uart_t uart_t;
+#endif
+/** @} */
+
+/**
  * @brief   UART device configuration.
  */
 typedef struct {
